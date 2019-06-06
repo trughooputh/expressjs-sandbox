@@ -1,11 +1,14 @@
+
 module.exports = {
+
     entry: './public/src/main.js',
     output: {
       filename: './public/build/bundle.js'
     },
     resolve: {
+  
       alias: {
-        vue: './vue.js'
+        vue: 'vue/dist/vue.esm.js'
       }
     },
     module: {
@@ -22,6 +25,7 @@ module.exports = {
           options: {
             loaders: {
             }
+            // other vue-loader options go here
           }
         },
         {
@@ -37,5 +41,8 @@ module.exports = {
           }
         }
       ]
+    },
+    devServer: {
+      port: 3000
     }
   }
