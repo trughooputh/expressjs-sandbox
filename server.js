@@ -26,7 +26,7 @@ console.log('App listening on port ' + port)
 var todoRoutes = require('./app/Routes')
 //  Use routes defined in Route.js and prefix with todo
 app.use('/api', todoRoutes)
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:' + port)
     // Request methods you wish to allow
@@ -37,6 +37,6 @@ app.use(function (req, res, next) {
     next()
 })
 // Server index.html page when request to the root is made
-app.get('/', function (req, res, next) {
+app.get('/', (req, res, next) => {
     res.sendfile('./public/index.html')
 })

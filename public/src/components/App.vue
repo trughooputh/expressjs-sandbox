@@ -2,9 +2,9 @@
   <div id="app">
     <div class="container">
       <div class="row col-md-12 d-flex justify-content-center">
-        <create-todo></create-todo>
+        <CreateTodo />
         <div class="row col-md-12 d-flex justify-content-center">
-        <list-todo></list-todo>
+        <ListTodo />
         </div>
       </div>
     </div>
@@ -12,12 +12,15 @@
 </template>
 
 <script>
-  import CreateTodo from './CreateTodo.vue';
-  import ListTodo from './ListTodo.vue';
+  import CreateTodo from './CreateTodo/CreateTodo.vue';
+  import ListTodo from './ListTodo/ListTodo.vue';
 
   export default {
     name: 'app',
-    components: {CreateTodo, ListTodo},
+    components: {
+      CreateTodo,
+      ListTodo
+    },
   }
 </script>
 

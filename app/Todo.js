@@ -11,10 +11,8 @@ var todo = new mongoose.Schema({
   done: {
     type: Boolean
   }
-},
-  {
-    collection: 'todos'
-  }
-)
+},{
+  collection: 'todos'
+});
 
 module.exports = mongoose.model('Todo', todo)
